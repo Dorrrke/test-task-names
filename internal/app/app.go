@@ -16,11 +16,12 @@ type App struct {
 func New(
 	addr string,
 	storage server.Storage,
+	enrichService server.Enrichment,
 ) *App {
 	serv := http.Server{
 		Addr: addr,
 	}
-	server := server.New(&serv, storage)
+	server := server.New(&serv, storage, enrichService)
 	server.RegisterServer()
 	return &App{
 		httpServer: server,
