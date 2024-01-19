@@ -3,10 +3,10 @@ package models
 type NameData struct {
 	Name       string `json:"name"`
 	Surname    string `json:"surname"`
-	Patronymic string `json:"patronymic"`
+	Patronymic string `json:"patronymic,omitempty"`
 	Age        int    `json:"age"`
 	Gender     string `json:"gender"`
-	National   string `json:"country"`
+	National   string `json:"national"`
 }
 
 type NationalApiModel struct {

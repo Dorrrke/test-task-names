@@ -72,7 +72,7 @@ func main() {
 	})
 
 	if err := g.Wait(); err != nil {
-		logger.Log.Error("exit reason: ", zap.Error(err))
+		logger.Log.Error("exit reason:", zap.Error(err))
 	}
 
 	//TODO: инит сервиса и харнилища
